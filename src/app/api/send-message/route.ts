@@ -8,8 +8,8 @@ export async function POST(request: Request) {
     const { username, content } = await request.json();
 
     try {
-        const user = await UserModel.findOne(username);
-
+        const user = await UserModel.findOne({username}).exec();
+        
         if (!username) {
             return Response.json(
                 {
@@ -47,7 +47,7 @@ export async function POST(request: Request) {
                 message: "Message sent Successfully"
             },
             {
-                status: 401
+                status: 200
             }
         )
     } catch (error) {
