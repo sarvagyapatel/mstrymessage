@@ -63,7 +63,7 @@ export async function POST(request: Request) {
                 password: hashedPassword,
                 verifyCode,
                 verifyCodeExpiry: expiryDate,
-                isVerified: false,
+                isVerified: true, // because sending otp to requires resend premium
                 isAcceptingMessages: true,
                 message: []
             });
@@ -91,7 +91,7 @@ export async function POST(request: Request) {
         return new Response(
             JSON.stringify({
                 success: true,
-                message: "User registered successfully, please verify your email"
+                message: "User registered successfully, please login"
             }),
             {
                 status: 200
