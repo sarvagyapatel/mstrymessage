@@ -135,7 +135,6 @@ function UserDashboard() {
 
   return (
     <>
-    <div className="absolute top-0 z-[-2] h-max w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
     <div className="my-8 mx-4 md:mx-8 lg:mx-auto p-6 bg-white rounded w-full max-w-6xl mt-36">
       <h1 className="text-4xl font-bold mb-4">User Dashboard</h1>
       <div className="mb-4">
@@ -191,7 +190,6 @@ function UserDashboard() {
           <p>No messages to display.</p>
         )}
       </div>
-    </div>
     </div>
     </>
   );
